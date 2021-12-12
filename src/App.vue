@@ -27,12 +27,13 @@ document.oncontextmenu = stop;
     @font-face {
       /* 庞门泽道字体 */
       font-family: PMZD;
-      src: url('https://my.wulvxinchen.cn/genshincard/font/PangMenZhengDao.ttf');
+      src: url('https://my.wulvxinchen.cn/genshincard/fonts/PangMenZhengDao.ttf');
     }
     @font-face {
       /* 榜书字体 */
       font-family: BS;
-      src: url('https://my.wulvxinchen.cn/genshincard/font/BangShu.ttf');
+      src: url('https://my.wulvxinchen.cn/genshincard/fonts/BangShu.ttf');
+      /* src: url('../public/font/BangShu.ttf'); */
     }
   #app {
     /* font-family: Avenir, Helvetica, Arial, sans-serif;

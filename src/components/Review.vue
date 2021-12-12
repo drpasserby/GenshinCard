@@ -24,7 +24,8 @@
         class="pic"
         v-for="(pic,index) in rolePicList" 
         :key="index">
-        <img :src="'https://my.wulvxinchen.cn/genshincard/allpic/rolepic/'+pic+'.png'"/>
+        <img :src="'https://my.wulvxinchen.cn/genshincard/allpic/rolepic/'+pic+'.png'"
+        crossorigin = "*"/>
         </div>
     </div>
     <br>
@@ -37,6 +38,7 @@
         <!-- 生成的图片在这里 -->
         <img 
         :src="htmlUrl"
+        crossorigin = "*"
         id="shotPic"/>
         <span slot="footer" class="dialog-footer">
             <el-button @click="closePic">关 闭</el-button>
@@ -77,12 +79,13 @@ export default {
         getReviewPic(){
             //生成预览图片，调用html2canvas
             html2canvas(this.$refs.imageTofile, {
+                crossorigin : "anonymous",
                 backgroundColor: null,
-                useCORS: true // 如果截图的内容里有图片,可能会有跨域的情况,加上这个参数,解决文件跨域问题
+                useCORS: true, // 如果截图的内容里有图片,可能会有跨域的情况,加上这个参数,解决文件跨域问题
             }).then((canvas) => {
                 this.htmlUrl = canvas.toDataURL('image/png')
             })
-            //提升成功
+            //提示成功
             this.$message({
                 message: '生成成功',
                 type: 'success'
