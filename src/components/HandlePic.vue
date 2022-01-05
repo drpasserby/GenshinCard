@@ -105,7 +105,14 @@ export default {
                     label: '荒泷一斗',    
                 },{
                     value: 'Ningguang',
-                    label: '凝光',    
+                    label: '凝光',
+                    children: [{
+                    value: 'Ningguang',
+                    label: '凝光',
+                },{
+                    value: 'Ningguang01',
+                    label: '纱中幽兰',
+                },]
                 },
                 {
                     value: 'Noelle',
@@ -137,9 +144,16 @@ export default {
                     label: '九条裟罗',    
                 },{
                     value: 'Keqing',
-                    label: '刻晴',    
+                    label: '刻晴',
+                    children: [{
+                    value: 'Keqing',
+                    label: '刻晴',
                 },{
-                    value: 'RaidenShogunr',
+                    value: 'Keqing01',
+                    label: '霓裾翩跹',
+                },]
+                },{
+                    value: 'RaidenShogun',
                     label: '雷电将军',    
                 }
                 ,{
