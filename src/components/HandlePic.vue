@@ -157,6 +157,9 @@ export default {
                     label: '雷电将军',    
                 }
                 ,{
+                    value: 'Yaemiko',
+                    label: '八重神子',    
+                },{
                     value: 'Razor',
                     label: '雷泽',    
                 },{
