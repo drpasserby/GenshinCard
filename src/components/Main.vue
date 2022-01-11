@@ -34,7 +34,7 @@ export default {
             userInf:{
                 name:'律心尘',
                 uid:'100114514',
-                rank:'57'
+                rank:''
             }
         }
     } 

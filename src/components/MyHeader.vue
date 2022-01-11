@@ -11,9 +11,9 @@
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <a href="./about.html">关于</a>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-            <a href="#">使用方法(NGA文字版)</a>
+            <a href="https://bbs.nga.cn/read.php?tid=29830696">使用方法(NGA文字版)</a>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-            <a href="#">使用方法(B站视频版)</a>
+            <a href="https://www.bilibili.com/video/av462374505">使用方法(B站视频版)</a>
         </span>
     </div>
 </template>

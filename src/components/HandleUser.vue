@@ -7,9 +7,9 @@
             <!-- 输入昵称 -->
             <span class="btntext">昵称</span>
             <el-input
-            placeholder="请输入昵称(最大5个字符)"
+            placeholder="请输入昵称"
             v-model="userInf.name"
-            maxlength="5"
+            maxlength="10"
             clearable>
             </el-input>
         </el-col>

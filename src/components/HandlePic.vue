@@ -35,6 +35,7 @@
                 @click="delRolePic"
                 circle></el-button>
             </span>
+
             
         </el-col>
     </el-row> 
@@ -155,8 +156,7 @@ export default {
                 },{
                     value: 'RaidenShogun',
                     label: '雷电将军',    
-                }
-                ,{
+                },{
                     value: 'Yaemiko',
                     label: '八重神子',    
                 },{
@@ -297,14 +297,19 @@ export default {
         //增加一个角色图片
         addRolePic(){
             //判断剩余的图片数量
-            if(this.setRolePicList.length<=3)
+            if(this.setRolePicList.length<=7)
+            {   
+                //通知启动深渊模式
+                if(this.setRolePicList.length==4)
+                this.$message('启动深境螺旋模式了惹~');
             //增加一张角色图片
             this.setRolePicList.push(this.oneRolePic[this.oneRolePic.length-1])
+            }
             else
             {   //警告太多了
                 this.$notify({
                 title: '警告',
-                message: this.$createElement('i', { style: 'color: teal'}, '你最多只能添加四位角色'),
+                message: this.$createElement('i', { style: 'color: teal'}, '你最多只能添加八位角色'),
                 type: 'warning'
                 });
             }
@@ -313,9 +318,13 @@ export default {
         //删除一个角色图片
         delRolePic(){
             //判断剩余的图片数量
-            if(this.setRolePicList.length>=1)
-            //删除一张角色图片
-            this.setRolePicList.pop()
+            if(this.setRolePicList.length>=1){
+                //通知关闭深渊模式
+                if(this.setRolePicList.length==5)
+                this.$message('关闭深境螺旋模式了惹~');
+                //删除一张角色图片
+                this.setRolePicList.pop()
+            }
             else
             {
                 //警告已经删光了
@@ -327,6 +336,7 @@ export default {
             }
             this.$bus.$emit('rolePicList',this.setRolePicList)
         },
+        
         //删除所有角色名片的函数（暂时废弃
         // clearRoleList(){
         //     console.log("pic里面的clear函数被调用了")

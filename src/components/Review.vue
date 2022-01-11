@@ -19,12 +19,14 @@
         </div>
     </div>
     <!-- 角色图片 -->
-    <div id="rolePic">
+    <div :class="{'rolePicDeep':deepdark,'rolePic':!deepdark}">
         <div 
         class="pic"
         v-for="(pic,index) in rolePicList" 
         :key="index">
         <img :src="'https://my.wulvxinchen.cn/genshincard/allpic/rolepic/'+pic+'.png'"
+        
+        :class="{'picImgDeep':deepdark,'picImg':!deepdark}"
         crossorigin = "*"/>
         </div>
     </div>
@@ -59,6 +61,8 @@ export default {
     },
     data(){
         return{
+            //深渊模式
+            deepdark:false,
             //角色图片列表
             rolePicList:[],
             //预览图片列表
@@ -117,6 +121,20 @@ export default {
             //0.5秒后清除预览图片
             setTimeout(function(){this.htmlUrl=''}, 500)
         },
+        //切换深渊模式
+        changeDeepDark(){
+            if(this.rolePicList.length>4){
+                
+                this.deepdark=true
+            }
+            else if(this.rolePicList.length<=4){
+                 this.deepdark=false
+            }
+        },
+        //设置名字字号
+        changeNameSize(){
+        document.getElementById("username").style.fontSize=(3.1-(this.userInf.name.length-1)*0.15).toString()+"em"
+        }
         //弹出框的函方法
     //     handleClose(done) {
     //     this.$confirm('确认关闭？')
@@ -130,6 +148,19 @@ export default {
         //     console.log("review里面的clear函数被调用了")
         //     this.rolePicList=''
         // },
+    },
+    watch:{
+        deep:true,
+        'rolePicList':{
+            handler: function(){
+                this.changeDeepDark()
+            }
+        },
+        'userInf.name':{
+            handler:function(){
+                this.changeNameSize()
+            }
+        }
     },
     mounted() {
         // 如果页面一加载就需要生成图片,就在mounted里调用方法,给一个setTimeout,保证页面元素已存在
@@ -162,7 +193,7 @@ export default {
         height: 15em;
         position: relative;
         background-color: aquamarine;
-        
+        border-radius: 10px;
     }
     #top{
         position: absolute;
@@ -185,10 +216,10 @@ export default {
         display:flex;
     }
     #username{
-        font-size: 2.5em;
+        font-size: 2.8em;
         float: left;
         white-space: nowrap;
-        overflow: hidden;
+        /*overflow: hidden;*/
         text-overflow: ellipsis;
     }
     #userrank{
@@ -204,17 +235,26 @@ export default {
         margin: .3em .3em;
         line-height: 1;
     }
-    #rolePic{
+    .rolePic{
         position:absolute;
         top:2em;
         right:.8em;
+    }
+    .rolePicDeep{
+        width: 28em;
+        position:absolute;
+        top:0.8em;
+        right:-3em;
     }
     .pic{
         float: left;
         margin: auto 1px;
     }
-    .pic img{
+    .picImg{
         max-width:7.5em;
+    }
+    .picImgDeep{
+        max-width:5.5em;
     }
     #shotPic{
         position: relative;
