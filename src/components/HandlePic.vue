@@ -56,7 +56,134 @@ export default {
                 }, {
                 value: 'wallpaper',
                 label: '壁纸',
-                children:[],
+                children:[{
+                    value: 'other/000',
+                    label: '胡桃88505493',
+                },{
+                    value: 'other/001',
+                    label: '重云94327484',
+                },{
+                    value: 'other/002',
+                    label: '托马93985187',
+                },{
+                    value: 'other/003',
+                    label: '温迪88511285',
+                },{
+                    value: 'other/004',
+                    label: '荧85543107',
+                },{
+                    value: 'other/005',
+                    label: '甘雨88062650',
+                },{
+                    value: 'other/006',
+                    label: '优菈89927268',
+                },{
+                    value: 'other/007',
+                    label: '琴&可莉90515771',
+                },{
+                    value: 'other/008',
+                    label: '绫华&宵宫91452046',
+                },{
+                    value: 'other/009',
+                    label: '影&九条92298341',
+                },{
+                    value: 'other/010',
+                    label: '荧&天理93302401',
+                },{
+                    value: 'other/011',
+                    label: '胡桃93995273',
+                },{
+                    value: 'other/012',
+                    label: '雷电影92536275',
+                },{
+                    value: 'other/013',
+                    label: '心海92155093',
+                },{
+                    value: 'other/014',
+                    label: '早柚92038536',
+                },{
+                    value: 'other/015',
+                    label: '宵宫91338358',
+                },{
+                    value: 'other/016',
+                    label: '绫华91223236',
+                },{
+                    value: 'other/017',
+                    label: '琴91105193',
+                },{
+                    value: 'other/018',
+                    label: '烟绯91060409',
+                },{
+                    value: 'other/019',
+                    label: '戴因90988010',
+                },{
+                    value: 'other/020',
+                    label: '万叶90898356',
+                },{
+                    value: 'other/021',
+                    label: '芭芭拉90873487',
+                },{
+                    value: 'other/022',
+                    label: '阿贝多90666224',
+                },{
+                    value: 'other/023',
+                    label: '甘雨88505522',
+                },{
+                    value: 'other/024',
+                    label: '钟离85839109',
+                },{
+                    value: 'other/025',
+                    label: '散兵85813475',
+                },{
+                    value: 'other/026',
+                    label: '魈85771751',
+                },{
+                    value: 'other/027',
+                    label: '公子85647662',
+                },{
+                    value: 'other/028',
+                    label: '雷泽85569641',
+                },{
+                    value: 'other/029',
+                    label: '可莉85523453',
+                },{
+                    value: 'other/030',
+                    label: '莫娜85270043',
+                },{
+                    value: 'other/031',
+                    label: '凝光85191094',
+                },{
+                    value: 'other/032',
+                    label: '七七85154442',
+                },{
+                    value: 'other/033',
+                    label: '行秋85114928',
+                },{
+                    value: 'other/034',
+                    label: '菲谢尔85096989',
+                },{
+                    value: 'other/035',
+                    label: '荧85030428',
+                },{
+                    value: 'other/036',
+                    label: '温迪85011957',
+                },{
+                    value: 'other/037',
+                    label: '安柏84976526',
+                },{
+                    value: 'other/038',
+                    label: '迪卢克84976487',
+                },{
+                    value: 'other/039',
+                    label: '钟离93250799',
+                },{
+                    value: 'other/040',
+                    label: '芭芭拉&荧84993805',
+                },{
+                    value: 'other/041',
+                    label: '胡桃&荧90640803',
+                },
+                ],
                 }],
             //选中的背景图片
             backPic: '',
@@ -135,6 +262,9 @@ export default {
                 value: 'thunder',
                 label: '雷元素',
                 children: [{
+                    value: 'Yaemiko',
+                    label: '八重神子',    
+                },{
                     value: 'Beidou',
                     label: '北斗',
                 },{
@@ -156,9 +286,6 @@ export default {
                 },{
                     value: 'RaidenShogun',
                     label: '雷电将军',    
-                },{
-                    value: 'Yaemiko',
-                    label: '八重神子',    
                 },{
                     value: 'Razor',
                     label: '雷泽',    

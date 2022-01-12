@@ -194,6 +194,7 @@ export default {
         position: relative;
         background-color: aquamarine;
         border-radius: 10px;
+        overflow: hidden;
     }
     #top{
         position: absolute;
