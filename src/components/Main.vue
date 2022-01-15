@@ -37,7 +37,17 @@ export default {
                 rank:''
             }
         }
-    } 
+    },
+    methods: {
+      open() {
+        this.$alert('请使用电脑/平板访问', '温馨提示', {
+          confirmButtonText: '喔~'
+        });
+      }
+    },
+    mounted(){
+      this.open()
+    }
 }
 </script>
 
