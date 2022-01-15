@@ -182,6 +182,18 @@ export default {
                 },{
                     value: 'other/041',
                     label: '胡桃&荧90640803',
+                },{
+                    value: 'other/042',
+                    label: '五郎94777090',
+                },{
+                    value: 'other/043',
+                    label: '北斗&万叶95048806',
+                },{
+                    value: 'other/044',
+                    label: '申鹤95298632',
+                },{
+                    value: 'other/045',
+                    label: '云堇95361585',
                 },
                 ],
                 }],
