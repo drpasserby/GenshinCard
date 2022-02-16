@@ -364,6 +364,10 @@ export default {
                 },{
                     value: 'SangonomiyaKokomi',
                     label: '珊瑚宫心海',
+                },
+                {
+                    value: 'KamisatoAyato',
+                    label: '神里凌人',
                 },{
                     value: 'Xingqiu',
                     label: '行秋',
