@@ -367,7 +367,7 @@ export default {
                 },
                 {
                     value: 'KamisatoAyato',
-                    label: '神里凌人',
+                    label: '神里绫人',
                 },{
                     value: 'Xingqiu',
                     label: '行秋',
