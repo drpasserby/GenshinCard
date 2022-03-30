@@ -283,6 +283,9 @@ export default {
                     value: 'Fischl',
                     label: '菲谢尔',    
                 },{
+                    value: 'KukiShinobu',
+                    label: '久岐忍',    
+                },{
                     value: 'KujouSara',
                     label: '九条裟罗',    
                 },{
@@ -364,13 +367,15 @@ export default {
                 },{
                     value: 'SangonomiyaKokomi',
                     label: '珊瑚宫心海',
-                },
-                {
+                },{
                     value: 'KamisatoAyato',
                     label: '神里绫人',
                 },{
                     value: 'Xingqiu',
                     label: '行秋',
+                },{
+                    value: 'Yelan',
+                    label: '夜兰',
                 }]
                 },{
                 value: 'ice',
