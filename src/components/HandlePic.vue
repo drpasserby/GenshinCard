@@ -206,8 +206,10 @@ export default {
                 children: [{
                     value: 'KaedeharaKazuha',
                     label: '枫原万叶',
-                },
-                {
+                },{
+                    value: 'ShikanoinHeizou',
+                    label: '鹿野院平藏',
+                },{
                     value: 'Jean',
                     label: '琴',
                     children: [{
