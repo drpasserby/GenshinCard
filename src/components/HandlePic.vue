@@ -282,8 +282,18 @@ export default {
                     value: 'Beidou',
                     label: '北斗',
                 },{
+                    value: 'Dori',
+                    label: '多莉',    
+                },{
                     value: 'Fischl',
-                    label: '菲谢尔',    
+                    label: '菲谢尔',
+                    children: [{
+                    value: 'Fischl',
+                    label: '菲谢尔',
+                    },{
+                    value: 'Fischl01',
+                    label: '极夜真梦',
+                    }]    
                 },{
                     value: 'KukiShinobu',
                     label: '久岐忍',    
@@ -321,7 +331,14 @@ export default {
                     label: '班尼特',
                 },{
                     value: 'Diluc',
-                    label: '迪卢克',    
+                    label: '迪卢克',
+                    children: [{
+                    value: 'Diluc',
+                    label: '迪卢克',
+                    },{
+                    value: 'Diluc01',
+                    label: '殷红终夜',
+                    }]    
                 },{
                     value: 'HuTao',
                     label: '胡桃',    
@@ -417,10 +434,12 @@ export default {
                 value: 'grass',
                 label: '草元素',
                 children: [{
-                    value: '',
-                    label: '吾律心尘',
-                    disabled: true,
-                }]
+                    value: 'Collei',
+                    label: '柯莱',
+                },{
+                    value: 'Tighnari',
+                    label: '提纳里',
+                },]
                 },{
                 value: 'Traveler',
                 label: '爷',
