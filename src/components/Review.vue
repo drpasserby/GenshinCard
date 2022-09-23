@@ -76,6 +76,10 @@ export default {
             //获取背景图片名字
             document.getElementById("cardReview").style.backgroundImage="url('https://my.wulvxinchen.cn/genshincard/allpic/backpic/"+name+".png')"
         },
+        customBackPicUrl(url){
+            //自定义背景图片
+            document.getElementById("cardReview").style.backgroundImage="url("+url+")"
+        },
         setrolePicList(list){
             //获取角色图片列表
             this.rolePicList=list
@@ -173,6 +177,7 @@ export default {
         this.$bus.$on('rolePicList',this.setrolePicList)
         this.$bus.$on('backPicName',this.getBackPic)
         this.$bus.$on('getPic',this.getReviewPic)
+        this.$bus.$on('customBackPicUrl',this.customBackPicUrl)
     },
     beforeDestroy() {
         //删除所有角色名片的函数（暂时废弃
@@ -182,6 +187,7 @@ export default {
         this.$bus.$off('rolePicList')
         this.$bus.$off('backPicName')
         this.$bus.$off('getPic')
+        this.$bus.$off('customBackPicUrl')
     },
 }
 </script>

@@ -11,6 +11,26 @@
                 @change="sendBackPic"
                 leaf>
             </el-cascader>
+            <span class="selbtn">
+                <el-button 
+                type="primary" 
+                icon="el-icon-plus" 
+                @click="customVisible = true"
+                circle></el-button>
+            </span>
+            <el-dialog
+                title="自定义图片"
+                :visible.sync="customVisible"
+                width="30%"
+                :before-close="handleClose">
+                <span>建议使用800*240像素的图片</span><br>
+                <span>格式如：<br>https://my.wulvxinchen.cn/pictures/things/ht.png</span>
+                <el-input v-model="customBackPicUrl" placeholder="请输入图片网址"></el-input>
+                <span slot="footer" class="dialog-footer">
+                    <el-button @click="customVisible = false">取 消</el-button>
+                    <el-button type="primary" @click="customBackPic">确 定</el-button>
+                </span>
+                </el-dialog>
         </el-col>
         <el-col :span="12">
             <!-- 选择角色图片 -->
@@ -22,7 +42,7 @@
                 :props="{ expandTrigger: 'hover' }"
                 leaf>
             </el-cascader>
-            <span id="selbtn">
+            <span class="selbtn">
                 <el-button 
                 type="primary" 
                 icon="el-icon-plus" 
@@ -35,8 +55,6 @@
                 @click="delRolePic"
                 circle></el-button>
             </span>
-
-            
         </el-col>
     </el-row> 
 </template>
@@ -455,13 +473,22 @@ export default {
             //选中的角色图片
             oneRolePic:'',
             //角色列表
-            setRolePicList:[]
+            setRolePicList:[],
+            //是否打开自定义输入框
+            customVisible:false,
+            //自定义背景图片的url
+            customBackPicUrl:"",
         }
     },
     methods: {
         //选择背景图片
         sendBackPic(){
             this.$bus.$emit('backPicName',this.backPic[this.backPic.length-1])
+        },
+        //自由选择背景图片
+        customBackPic(){
+            this.customVisible = false
+            this.$bus.$emit('customBackPicUrl',this.customBackPicUrl)
         },
         //增加一个角色图片
         addRolePic(){
@@ -531,7 +558,7 @@ export default {
         float: left;
         margin-left: 5.8em;
     }
-    #selbtn{
+    .selbtn{
         margin: 0px 15px;
     }
 </style>
